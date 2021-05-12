@@ -9,10 +9,25 @@
 ---
 
 - [macOS Cheatsheet](#macos-cheatsheet)
+  - [Shell](#shell)
   - [PDF](#pdf)
   - [Plist](#plist)
   - [Preview](#preview)
   - [Related Projects](#related-projects)
+
+## Shell
+
+- Fix `zsh`'s `compinit` error when initializing a new shell
+
+  > zsh compinit: insecure directories, run compaudit for list.
+  > Ignore insecure directories and continue [y] or abort compinit [n]?
+
+  ```sh
+  # Run the following command to fix the error above
+  compaudit | xargs chmod g-w
+  ```
+
+  [Source](https://github.com/zsh-users/zsh-completions/issues/680#issuecomment-612960481)
 
 ## PDF
 
