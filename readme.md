@@ -34,6 +34,15 @@
 - Merge PDFs
 
   ```sh
+  gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=merged.pdf *.pdf
+  ```
+  
+  [Source](https://apple.stackexchange.com/a/293198)
+
+  ```sh
+  # Requires 'python' binary
+  #
+  # Alternative 
   # Merge multiple pdfs in current directory with prefix foo, e.g.
   # foo1.pdf foo2.pdf and foo3.pdf and create new PDF called merged.pdf
   \ls -larth foo*.pdf | xargs "/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py" -o merged.pdf {}
@@ -42,6 +51,8 @@
   [Source](https://apple.stackexchange.com/a/230447)
 
   ```sh
+  # Requires 'python' binary
+  #
   # Alternative
   # Merge all pdfs in current directory into merged.pdf
   "/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py" -o merged.pdf *.pdf
