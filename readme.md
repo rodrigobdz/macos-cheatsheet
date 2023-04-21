@@ -71,6 +71,12 @@
   # Print file as XML
   /usr/libexec/PlistBuddy -x -c "Print" foo.plist
   ```
+ 
+- View list of bypassed invalid SSL certificate warnings in Safari
+
+  ```sh
+  plutil -p ~/Library/Containers/com.apple.Safari/Data/Library/Safari/BypassedInvalidCertificateWarning.plist
+  ```
 
 ## Preview
 
@@ -81,8 +87,7 @@
   > "my sentence in preview"
 
   [Source](https://apple.stackexchange.com/a/155411)
-
-## Related Projects
+  
 
 - **[rodrigobdz/linux-cheatsheet](https://github.com/rodrigobdz/linux-cheatsheet)**
 - [rodrigobdz/minimal-readme](https://github.com/rodrigobdz/minimal-readme)
